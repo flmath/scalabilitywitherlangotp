@@ -1,0 +1,9 @@
+{
+  "name": "Erlang Development",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/erlang:2": {}
+  },
+  "postCreateCommand": "sudo apt update && sudo apt install -y erlang"
+}
