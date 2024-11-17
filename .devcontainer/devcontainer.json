@@ -1,9 +1,13 @@
 {
-  "name": "Erlang Development",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "features": {
-    "ghcr.io/devcontainers/features/common-utils:2": {},
-    "ghcr.io/devcontainers/features/erlang:2": {}
+  "name": "Erlang Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
   },
-  "postCreateCommand": "sudo apt update && sudo apt install -y erlang"
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "erlang-ls.erlang-ls"  // Erlang Language Server extension
+  ],
+  "postCreateCommand": "erl -version"
 }
